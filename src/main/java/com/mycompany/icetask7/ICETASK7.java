@@ -15,7 +15,8 @@ public class ICETASK7 {
         //Create Scanner object
        Scanner input = new Scanner(System.in);
        
-       
+       //Create an instance of a class
+       Reservation Reservation = new Reservation();
        
         
     }
