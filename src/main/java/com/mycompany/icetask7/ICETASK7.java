@@ -18,6 +18,10 @@ public class ICETASK7 {
        //Create an instance of a class
        Reservation Reservation = new Reservation();
        
+       //Declarations
+       String bookingcode;
+       String password;
+       
         
     }
 }
