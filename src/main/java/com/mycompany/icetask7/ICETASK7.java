@@ -22,6 +22,13 @@ public class ICETASK7 {
        String bookingcode;
        String password;
        
+       //Prompt user for booking code and password
+       System.out.println("Enter Booking Code: ");
+       bookingcode = input.next();
+       System.out.println("Enter password: ");
+       password = input.next();
+       
+       
         
     }
 }
