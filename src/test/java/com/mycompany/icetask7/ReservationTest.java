@@ -43,18 +43,26 @@ public class ReservationTest {
     /**
      * Test of checkPasswordComplexity method, of class Reservation.
      */
+    //Test Valid Password
     @Test
-    public void testCheckPasswordComplexity() {
+    public void testValidPassword() {
         System.out.println("checkPasswordComplexity");
-        String password = "";
+        String password = "Password1!";
+        Reservation instance = new Reservation();
+        boolean expResult = true;
+        boolean result = instance.checkPasswordComplexity(password);
+        assertEquals(expResult, result);
+    }
+    //Test Invalid Password
+    @Test
+    public void testInvalidPassword() {
+        System.out.println("checkPasswordComplexity");
+        String password = "Password";
         Reservation instance = new Reservation();
         boolean expResult = false;
         boolean result = instance.checkPasswordComplexity(password);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-
     /**
      * Test of makeReservation method, of class Reservation.
      */
