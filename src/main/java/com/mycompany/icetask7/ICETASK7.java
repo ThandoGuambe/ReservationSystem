@@ -28,7 +28,10 @@ public class ICETASK7 {
        System.out.println("Enter password: ");
        password = input.next();
        
-       
+       //Reservation
+       System.out.println("________________________________________________________");
+       String ReservationStatus = Reservation.makeReservation(bookingcode, password);
+       String ResStatus = ReservationStatus;
         
     }
 }
