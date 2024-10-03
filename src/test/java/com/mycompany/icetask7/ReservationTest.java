@@ -66,17 +66,37 @@ public class ReservationTest {
     /**
      * Test of makeReservation method, of class Reservation.
      */
+    //Valid Reservation.
     @Test
-    public void testMakeReservation() {
+    public void testValidReservation() {
         System.out.println("makeReservation");
-        String bookingcode = "";
-        String password = "";
+        String bookingcode = "Event_123";
+        String password = "Password1!";
         Reservation instance = new Reservation();
-        String expResult = "";
+        String expResult = "Reservation successfully made!";
         String result = instance.makeReservation(bookingcode, password);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+     //Invalid Reservation. [Invalid Booking Code]
+    @Test
+    public void testInvalidReservation1() {
+        System.out.println("makeReservation");
+        String bookingcode = "Event.7!!";
+        String password = "Password1!";
+        Reservation instance = new Reservation();
+        String expResult = "Booking code is incorrectly formatted.";
+        String result = instance.makeReservation(bookingcode, password);
+        assertEquals(expResult, result);
+    }
+     //Invalid Reservation. [Invalid password
+    @Test
+    public void testInvalidReservation2() {
+        System.out.println("makeReservation");
+        String bookingcode = "Event_123";
+        String password = "Password";
+        Reservation instance = new Reservation();
+        String expResult = "Password does not meet the complexity requirements.";
+        String result = instance.makeReservation(bookingcode, password);
+        assertEquals(expResult, result);
+    }
 }
