@@ -29,6 +29,16 @@ public class ReservationTest {
         boolean result = instance.checkBookingCode(bookingcode);
         assertEquals(expResult, result);
     }
+    //Test Invalid Booking Code
+    @Test
+    public void testInvalidBookingCode() {
+        System.out.println("checkBookingCode");
+        String bookingcode = "Event.7!";
+        Reservation instance = new Reservation();
+        boolean expResult = false;
+        boolean result = instance.checkBookingCode(bookingcode);
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of checkPasswordComplexity method, of class Reservation.
